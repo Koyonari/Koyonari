@@ -2,7 +2,7 @@
 
 I'm a student in Ngee Ann Polytechnic, pursuing a diploma in Information Technology with my sights set on being an exceptional full-stack developer in the future.
 
-Give my portfolio a look: [Portfolio Website](https://anyongshyan-portfolio.vercel.app/) <br>
+Give my portfolio a look: [Portfolio Website](https://yongshyan.vercel.app/) <br>
 Contact me here: yongshyan.an@gmail.com
 
 ## 🌐 Socials:
