@@ -1,15 +1,13 @@
-# 💫 About Me:
-
-I'm a student in Ngee Ann Polytechnic, pursuing a diploma in Information Technology with my sights set on being an exceptional full-stack developer in the future.
+# 💫 About Me
 
 Give my portfolio a look: [Portfolio Website](https://yongshyan.vercel.app/) <br>
 Contact me here: yongshyan.an@gmail.com
 
-## 🌐 Socials:
+## 🌐 Socials
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yong-shyan-an-76ab8a272/)
 
-# 📊 GitHub Stats:
+# 📊 GitHub Stats
 
 ![](https://github-readme-stats.vercel.app/api?username=Koyonari&theme=dark&hide_border=false&include_all_commits=true&count_private=false)<br/>
 ![](https://github-readme-streak-stats.herokuapp.com/?user=Koyonari&theme=dark&hide_border=false)<br/>
