@@ -2,9 +2,10 @@
   ============================================================================
   PROFILE README — assembled from:
     • Andrew6rant/Andrew6rant  → neofetch-style stats card (light/dark SVG),
-                                  pinned at the very top
-    • andriidrok1/andriidrok1  → animated head, contributions graph,
-                                  About / Stack / Projects / Stats sections
+                                  pinned at the very top; face animation
+                                  ported over from andriidrok1's portrait
+    • andriidrok1/andriidrok1  → contributions graph, About / Stack /
+                                  Projects / Stats sections
     • umenzi/umenzi            → animated contribution "snake" graph
 
   Placeholders for About / Stack / Projects are still generic — fill those
@@ -27,17 +28,6 @@
 </p>
 
 <br>
-
-<!-- ============================== HEAD ==================================
-     Animated portrait (andriidrok1 style). Rendered as an SVG so it survives
-     GitHub stripping <script> tags — animation comes from SMIL inside the SVG.
-========================================================================= -->
-
-<p align="center">
-  <a href="https://github.com/Koyonari/Koyonari/blob/main/ascii.svg">
-    <img src="https://raw.githubusercontent.com/Koyonari/Koyonari/main/ascii.svg" alt="Yong Shyan" />
-  </a>
-</p>
 
 <!-- ===================== CONTRIBUTIONS GRAPH (andriidrok1) ==============
      "Contributions in the last year" card.
