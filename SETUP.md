@@ -13,8 +13,12 @@ minutes either way, and you're guaranteed a working, unmodified copy:
 
 Go to https://github.com/andriidrok1/andriidrok1 and copy these into your repo:
 - `scripts/generate_stats.py` → `scripts/generate_stats.py`
-- `ascii.svg` → `ascii.svg` (you'll swap the art for your own portrait/photo)
 - any `hd-*.svg` heading graphics you want to reuse
+
+(Their `ascii.svg` portrait isn't used standalone here — its animated art was
+transplanted directly into the face column of `dark_mode.svg`/`light_mode.svg`
+instead. Swap that art for your own portrait by editing the nested `<svg>`
+block near the top of those two files.)
 
 No extra secrets needed beyond the default `GITHUB_TOKEN` — the workflow
 already passes it in.
