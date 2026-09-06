@@ -103,7 +103,7 @@ def graph_repos_stars(count_type, owner_affiliation, cursor=None, add_loc=0, del
         if count_type == 'repos':
             return request.json()['data']['user']['repositories']['totalCount']
         elif count_type == 'stars':
-            edges = [e for e in request.json()['data']['user']['repositories']['edges'] if e['node'] is not None]
+            edges = [e for e in request.json()['data']['user']['repositories']['edges'] if e is not None and e['node'] is not None]
             return stars_counter(edges)
 
 
@@ -209,10 +209,11 @@ def loc_query(owner_affiliation, comment_size=0, force_cache=False, cursor=None,
     }'''
     variables = {'owner_affiliation': owner_affiliation, 'login': USER_NAME, 'cursor': cursor}
     request = simple_request(loc_query.__name__, query, variables)
-    # node can come back null for a repo the token can list (e.g. via org affiliation)
-    # but hasn't been granted read access to (org owner hasn't approved the fine-grained
-    # PAT) -- drop those rather than crashing on them downstream.
-    page_edges = [e for e in request.json()['data']['user']['repositories']['edges'] if e['node'] is not None]
+    # An edge (or its node) can come back null for a repo the token can list (e.g. via
+    # org affiliation) but hasn't been granted read access to -- GraphQL error
+    # propagation can null out the edge itself, not just edge.node. Drop those rather
+    # than crashing on them downstream.
+    page_edges = [e for e in request.json()['data']['user']['repositories']['edges'] if e is not None and e['node'] is not None]
     if request.json()['data']['user']['repositories']['pageInfo']['hasNextPage']:   # If repository data has another page
         edges += page_edges            # Add on to the LoC count
         return loc_query(owner_affiliation, comment_size, force_cache, request.json()['data']['user']['repositories']['pageInfo']['endCursor'], edges)
