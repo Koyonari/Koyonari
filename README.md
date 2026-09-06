@@ -1,24 +1,3 @@
-<!--
-  ============================================================================
-  PROFILE README — assembled from:
-    • Andrew6rant/Andrew6rant  → neofetch-style stats card (light/dark SVG),
-                                  pinned at the very top; face animation
-                                  ported over from andriidrok1's portrait
-    • andriidrok1/andriidrok1  → contributions graph, About / Stack /
-                                  Projects / Stats sections
-    • umenzi/umenzi            → animated contribution "snake" graph
-
-  Placeholders for About / Stack / Projects are still generic — fill those
-  in with your own words. Everything else points at Koyonari/Koyonari.
-  ============================================================================
--->
-
-<!-- ================================ STATS ================================
-     Andrew6rant-style stats card: repos, commits, stars, followers, total
-     lines of code — deliberately NO contribution calendar here (that lives
-     in the "GitHub Graph" section below, via umenzi's snake).
-========================================================================= -->
-
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Koyonari/Koyonari/main/dark_mode.svg">
