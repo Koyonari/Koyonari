@@ -1,0 +1,73 @@
+name: refresh profile stats
+
+# Regenerates:
+#  - ascii.svg / stats.svg      (head + contributions graph, andriidrok1-style)
+#  - light_mode.svg / dark_mode.svg   (Stats block, Andrew6rant-style)
+#
+# This workflow only runs the scripts — it doesn't replace them. Before this
+# will do anything useful you need to drop the two source files into place
+# (see ../../SETUP.md for exactly where to get them).
+
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-stats
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests python-dateutil lxml
+
+      # --- Head + contributions graph -------------------------------------
+      # scripts/generate_stats.py comes from andriidrok1/andriidrok1.
+      # Copy it (and its starting ascii.svg / any hd-*.svg headings you want)
+      # into this repo before enabling this step.
+      - name: Generate head + contributions graph
+        if: hashFiles('scripts/generate_stats.py') != ''
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_LOGIN: ${{ github.repository_owner }}
+        run: python3 scripts/generate_stats.py
+
+      # --- Stats block ------------------------------------------------------
+      # today.py, light_mode.svg and dark_mode.svg come from
+      # Andrew6rant/Andrew6rant. Copy all three into the root of this repo
+      # before enabling this step. today.py needs a fine-grained PAT saved
+      # as the ACCESS_TOKEN secret (scopes: read:Followers, read:Starring,
+      # read:Watching, read:Commit statuses, read:Contents, read:Issues,
+      # read:Metadata, read:Pull Requests).
+      - name: Generate stats card
+        if: hashFiles('today.py') != ''
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          USER_NAME: ${{ github.repository_owner }}
+        run: python3 today.py
+
+      - name: Commit whatever changed
+        run: |
+          FILES="ascii.svg stats.svg streak.svg langs.svg year.svg hd-*.svg light_mode.svg dark_mode.svg cache"
+          if [ -z "$(git status --porcelain -- $FILES 2>/dev/null)" ]; then
+            echo "no changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- $FILES
+          git commit -m "stats: refresh profile graphics"
+          git push
