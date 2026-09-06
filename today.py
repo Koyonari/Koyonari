@@ -328,25 +328,36 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib
     """
     tree = etree.parse(filename)
     root = tree.getroot()
-    justify_format(root, 'age_data', age_data, 51)
-    justify_format(root, 'commit_data', commit_data, 22)
+    # age_data, repo_data, commit_data and loc_data are each the first
+    # (row-starting) value on their line, so their dot-padding is handled by
+    # realign_info_column() below instead of justify_format() -- it derives
+    # every row's gap width straight from the SVG's own current label text,
+    # so nothing about the alignment is a hardcoded number that can go stale.
+    find_and_replace(root, 'age_data', format_number(age_data))
+    find_and_replace(root, 'commit_data', format_number(commit_data))
     justify_format(root, 'star_data', star_data, 14)
-    justify_format(root, 'repo_data', repo_data, 6)
+    find_and_replace(root, 'repo_data', format_number(repo_data))
     justify_format(root, 'contrib_data', contrib_data)
     justify_format(root, 'follower_data', follower_data, 10)
-    justify_format(root, 'loc_data', loc_data[2], 9)
+    find_and_replace(root, 'loc_data', format_number(loc_data[2]))
     justify_format(root, 'loc_add', loc_data[0])
     justify_format(root, 'loc_del', loc_data[1], 7)
+    realign_info_column(root)
     tree.write(filename, encoding='utf-8', xml_declaration=True)
+
+
+def format_number(value):
+    """Comma-formats an int; passes any other type through as a string."""
+    if isinstance(value, int):
+        return '{:,}'.format(value)
+    return str(value)
 
 
 def justify_format(root, element_id, new_text, length=0):
     """
     Updates and formats the text of the element, and modifes the amount of dots in the previous element to justify the new text on the svg
     """
-    if isinstance(new_text, int):
-        new_text = f"{'{:,}'.format(new_text)}"
-    new_text = str(new_text)
+    new_text = format_number(new_text)
     find_and_replace(root, element_id, new_text)
     just_len = max(0, length - len(new_text))
     if just_len <= 2:
@@ -355,6 +366,75 @@ def justify_format(root, element_id, new_text, length=0):
     else:
         dot_string = ' ' + ('.' * just_len) + ' '
     find_and_replace(root, f"{element_id}_dots", dot_string)
+
+
+def _tag_name(el):
+    """Local tag name of an lxml element, stripped of its XML namespace."""
+    return etree.QName(el).localname
+
+
+def realign_info_column(root):
+    """
+    Walks every "<label>:<dots><value>" row in the info column (the neofetch
+    card's right-hand block) and recomputes each row's dot-padding so every
+    row's value starts in the same left-aligned column -- set dynamically by
+    whichever row's label is currently longest, not a hardcoded width. Runs
+    on every refresh, so it stays correct even if a label is hand-edited
+    later (a row added, "Kernel" renamed, etc.) without needing any of these
+    numbers touched again.
+    """
+    info_text = None
+    for el in root.iter():
+        if _tag_name(el) != 'text':
+            continue
+        children = list(el)
+        if children and children[0].get('x') == '390' and children[0].get('y') == '30':
+            info_text = el
+            break
+    if info_text is None:
+        return
+
+    rows, current = [], None
+    for child in info_text:
+        if _tag_name(child) != 'tspan':
+            continue
+        if child.get('y') is not None:
+            current = [child]
+            rows.append(current)
+        elif current is not None:
+            current.append(child)
+
+    def format_dots(width):
+        dot_map = {0: '', 1: ' ', 2: '. '}
+        return dot_map[width] if width <= 2 else ' ' + ('.' * (width - 2)) + ' '
+
+    # A matching row looks like:
+    #   <tspan class="cc">. </tspan>
+    #   (<tspan class="key">Key</tspan>[.<tspan class="key">Sub</tspan>])+ :
+    #   <tspan class="cc"[ id]>...dots...</tspan>
+    #   <tspan class="value"[ id]>...</tspan> ...anything else on the line...
+    matches = []
+    for row in rows:
+        if len(row) < 4 or row[0].get('class') != 'cc' or (row[0].text or '') != '. ':
+            continue
+        i, label = 1, ''
+        while i < len(row) and row[i].get('class') == 'key':
+            label += (row[i].text or '') + (row[i].tail or '')
+            i += 1
+        if not label.endswith(':'):
+            continue
+        if row[i].get('class') != 'cc':
+            continue
+        dots_el = row[i]
+        if i + 1 >= len(row) or row[i + 1].get('class') != 'value':
+            continue
+        matches.append((dots_el, len('. ') + len(label)))
+
+    if not matches:
+        return
+    target = max(prefix_len for _, prefix_len in matches) + 1
+    for dots_el, prefix_len in matches:
+        dots_el.text = format_dots(target - prefix_len)
 
 
 def find_and_replace(root, element_id, new_text):
