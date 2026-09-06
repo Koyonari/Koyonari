@@ -16,33 +16,56 @@ size-adjust: 109%;
 text, tspan {white-space: pre;}
 </style>
 <rect width="985px" height="530px" fill="#f6f8fa" rx="15"/>
-<text x="15" y="30" fill="#24292f" class="ascii">
-<tspan x="15" y="30">            ;;,, ,;,|g;~,,                      </tspan>
-<tspan x="15" y="50">         ,g@@@@@@l&amp;$$$@|,w$$@gy,            </tspan>
-<tspan x="15" y="70">        $@@@@@@@@@@$@@@@@@@@$$MW$k              </tspan>
-<tspan x="15" y="90">       $$@@@@@@B@@@@@@@@@@@@@$@$$g,$            </tspan>
-<tspan x="15" y="110">     g@llM**'''||%@@@@@$@@$@@@@@@@L$&amp;      </tspan>
-<tspan x="15" y="130">   @$&amp;$F         ''T%M$@@@@@@@@@@@$@$@     </tspan>
-<tspan x="15" y="150">  @@@@F              ']@@@@@@$$@$@@@@          </tspan>
-<tspan x="15" y="170">  @@@$L               |$@@@$$l$@@@@$F          </tspan>
-<tspan x="15" y="190"> ]@@@@L ,@@$@@@@L  ,l@$$$$$$$$$@@@@@           </tspan>
-<tspan x="15" y="210">  %$@@@$}',,gg@||@@@@l@g@ggg|l$&amp;$@@$       </tspan>
-<tspan x="15" y="230">  ]@@@@@'"*TTTTT'F  ]Wl|||''"'$]@@@@ </tspan>
-<tspan x="15" y="250">   $$@M$       ,#    ]gg,,,,,.r'$@$            </tspan>
-<tspan x="15" y="270">    &amp;$L        ' ,, ,,,'T''`    $$L        </tspan>
-<tspan x="15" y="290">     lL         T"||||!   `-    l"'  </tspan>
-<tspan x="15" y="310">     ' |        '||l||||"|L|  L `         </tspan>
-<tspan x="15" y="330">      ''   '|L++=*****""*"||` L|</tspan>
-<tspan x="15" y="350">        |           ,,      |||F               </tspan>
-<tspan x="15" y="370">        '         |||||||| ||l$                </tspan>
-<tspan x="15" y="390">          !                |l&amp;L            </tspan>
-<tspan x="15" y="410">           '!,       |||,||@M|L                </tspan>
-<tspan x="15" y="430">            ||l&amp;$@$$@$$$@$MT|||            </tspan>
-<tspan x="15" y="450">         |    |||lll$$llll|||||L               </tspan>
-<tspan x="15" y="470">    ,;y@        ||||||l||@|||||l               </tspan>
-<tspan x="15" y="490">,g$@$$$@         |||||||||||||||| $g,          </tspan>
-<tspan x="15" y="510">$$$$$$$$@    |    |||||||||||||| |$$@g         </tspan>
-</text>
+<clipPath id="l0"><rect x="15" y="14" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="0.0s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l1"><rect x="15" y="34" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="0.09s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l2"><rect x="15" y="54" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="0.18s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l3"><rect x="15" y="74" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="0.27s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l4"><rect x="15" y="94" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="0.36s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l5"><rect x="15" y="114" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="0.45s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l6"><rect x="15" y="134" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="0.54s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l7"><rect x="15" y="154" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="0.63s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l8"><rect x="15" y="174" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="0.72s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l9"><rect x="15" y="194" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="0.81s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l10"><rect x="15" y="214" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="0.9s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l11"><rect x="15" y="234" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="0.99s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l12"><rect x="15" y="254" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="1.08s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l13"><rect x="15" y="274" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="1.17s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l14"><rect x="15" y="294" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="1.26s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l15"><rect x="15" y="314" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="1.35s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l16"><rect x="15" y="334" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="1.44s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l17"><rect x="15" y="354" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="1.53s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l18"><rect x="15" y="374" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="1.62s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l19"><rect x="15" y="394" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="1.71s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l20"><rect x="15" y="414" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="1.8s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l21"><rect x="15" y="434" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="1.89s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l22"><rect x="15" y="454" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="1.98s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l23"><rect x="15" y="474" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="2.07s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<clipPath id="l24"><rect x="15" y="494" width="0" height="22"><animate attributeName="width" from="0" to="380" begin="2.16s" dur="0.09s" fill="freeze"/></rect></clipPath>
+<g clip-path="url(#l0)"><text x="15" y="30" fill="#24292f" class="ascii">            ;;,, ,;,|g;~,,                      </text></g>
+<g clip-path="url(#l1)"><text x="15" y="50" fill="#24292f" class="ascii">         ,g@@@@@@l&amp;$$$@|,w$$@gy,            </text></g>
+<g clip-path="url(#l2)"><text x="15" y="70" fill="#24292f" class="ascii">        $@@@@@@@@@@$@@@@@@@@$$MW$k              </text></g>
+<g clip-path="url(#l3)"><text x="15" y="90" fill="#24292f" class="ascii">       $$@@@@@@B@@@@@@@@@@@@@$@$$g,$            </text></g>
+<g clip-path="url(#l4)"><text x="15" y="110" fill="#24292f" class="ascii">     g@llM**'''||%@@@@@$@@$@@@@@@@L$&amp;      </text></g>
+<g clip-path="url(#l5)"><text x="15" y="130" fill="#24292f" class="ascii">   @$&amp;$F         ''T%M$@@@@@@@@@@@$@$@     </text></g>
+<g clip-path="url(#l6)"><text x="15" y="150" fill="#24292f" class="ascii">  @@@@F              ']@@@@@@$$@$@@@@          </text></g>
+<g clip-path="url(#l7)"><text x="15" y="170" fill="#24292f" class="ascii">  @@@$L               |$@@@$$l$@@@@$F          </text></g>
+<g clip-path="url(#l8)"><text x="15" y="190" fill="#24292f" class="ascii"> ]@@@@L ,@@$@@@@L  ,l@$$$$$$$$$@@@@@           </text></g>
+<g clip-path="url(#l9)"><text x="15" y="210" fill="#24292f" class="ascii">  %$@@@$}',,gg@||@@@@l@g@ggg|l$&amp;$@@$       </text></g>
+<g clip-path="url(#l10)"><text x="15" y="230" fill="#24292f" class="ascii">  ]@@@@@'"*TTTTT'F  ]Wl|||''"'$]@@@@ </text></g>
+<g clip-path="url(#l11)"><text x="15" y="250" fill="#24292f" class="ascii">   $$@M$       ,#    ]gg,,,,,.r'$@$            </text></g>
+<g clip-path="url(#l12)"><text x="15" y="270" fill="#24292f" class="ascii">    &amp;$L        ' ,, ,,,'T''`    $$L        </text></g>
+<g clip-path="url(#l13)"><text x="15" y="290" fill="#24292f" class="ascii">     lL         T"||||!   `-    l"'  </text></g>
+<g clip-path="url(#l14)"><text x="15" y="310" fill="#24292f" class="ascii">     ' |        '||l||||"|L|  L `         </text></g>
+<g clip-path="url(#l15)"><text x="15" y="330" fill="#24292f" class="ascii">      ''   '|L++=*****""*"||` L|</text></g>
+<g clip-path="url(#l16)"><text x="15" y="350" fill="#24292f" class="ascii">        |           ,,      |||F               </text></g>
+<g clip-path="url(#l17)"><text x="15" y="370" fill="#24292f" class="ascii">        '         |||||||| ||l$                </text></g>
+<g clip-path="url(#l18)"><text x="15" y="390" fill="#24292f" class="ascii">          !                |l&amp;L            </text></g>
+<g clip-path="url(#l19)"><text x="15" y="410" fill="#24292f" class="ascii">           '!,       |||,||@M|L                </text></g>
+<g clip-path="url(#l20)"><text x="15" y="430" fill="#24292f" class="ascii">            ||l&amp;$@$$@$$$@$MT|||            </text></g>
+<g clip-path="url(#l21)"><text x="15" y="450" fill="#24292f" class="ascii">         |    |||lll$$llll|||||L               </text></g>
+<g clip-path="url(#l22)"><text x="15" y="470" fill="#24292f" class="ascii">    ,;y@        ||||||l||@|||||l               </text></g>
+<g clip-path="url(#l23)"><text x="15" y="490" fill="#24292f" class="ascii">,g$@$$$@         |||||||||||||||| $g,          </text></g>
+<g clip-path="url(#l24)"><text x="15" y="510" fill="#24292f" class="ascii">$$$$$$$$@    |    |||||||||||||| |$$@g         </text></g>
 <text x="390" y="30" fill="#24292f">
 <tspan x="390" y="30">koyonari@github</tspan> -———————————————————————————————————————————-—-
 <tspan x="390" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">CachyOS</tspan>
