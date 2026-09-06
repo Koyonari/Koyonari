@@ -103,7 +103,8 @@ def graph_repos_stars(count_type, owner_affiliation, cursor=None, add_loc=0, del
         if count_type == 'repos':
             return request.json()['data']['user']['repositories']['totalCount']
         elif count_type == 'stars':
-            return stars_counter(request.json()['data']['user']['repositories']['edges'])
+            edges = [e for e in request.json()['data']['user']['repositories']['edges'] if e['node'] is not None]
+            return stars_counter(edges)
 
 
 def recursive_loc(owner, repo_name, data, cache_comment, addition_total=0, deletion_total=0, my_commits=0, cursor=None):
@@ -208,11 +209,15 @@ def loc_query(owner_affiliation, comment_size=0, force_cache=False, cursor=None,
     }'''
     variables = {'owner_affiliation': owner_affiliation, 'login': USER_NAME, 'cursor': cursor}
     request = simple_request(loc_query.__name__, query, variables)
+    # node can come back null for a repo the token can list (e.g. via org affiliation)
+    # but hasn't been granted read access to (org owner hasn't approved the fine-grained
+    # PAT) -- drop those rather than crashing on them downstream.
+    page_edges = [e for e in request.json()['data']['user']['repositories']['edges'] if e['node'] is not None]
     if request.json()['data']['user']['repositories']['pageInfo']['hasNextPage']:   # If repository data has another page
-        edges += request.json()['data']['user']['repositories']['edges']            # Add on to the LoC count
+        edges += page_edges            # Add on to the LoC count
         return loc_query(owner_affiliation, comment_size, force_cache, request.json()['data']['user']['repositories']['pageInfo']['endCursor'], edges)
     else:
-        return cache_builder(edges + request.json()['data']['user']['repositories']['edges'], comment_size, force_cache)
+        return cache_builder(edges + page_edges, comment_size, force_cache)
 
 
 def cache_builder(edges, comment_size, force_cache, loc_add=0, loc_del=0):
