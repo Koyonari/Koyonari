@@ -6,8 +6,8 @@
                                   About / Stack / Projects sections
     • umenzi/umenzi            → animated contribution "snake" graph
 
-  Replace every YOUR_USERNAME, "Your Name", link, and text block with your own.
-  See the setup notes at the very bottom for what each image needs to work.
+  Placeholders for About / Stack / Projects are still generic — fill those
+  in with your own words. Everything else points at Koyonari/Koyonari.
   ============================================================================
 -->
 
@@ -17,8 +17,8 @@
 ========================================================================= -->
 
 <p align="center">
-  <a href="https://github.com/YOUR_USERNAME/YOUR_USERNAME/blob/main/ascii.svg">
-    <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/main/ascii.svg" alt="Your Name" />
+  <a href="https://github.com/Koyonari/Koyonari/blob/main/ascii.svg">
+    <img src="https://raw.githubusercontent.com/Koyonari/Koyonari/main/ascii.svg" alt="Yong Shyan" />
   </a>
 </p>
 
@@ -27,16 +27,16 @@
 ========================================================================= -->
 
 <p align="center">
-  <a href="https://github.com/YOUR_USERNAME/YOUR_USERNAME/blob/main/stats.svg">
-    <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/main/stats.svg" alt="Contributions in the last year" />
+  <a href="https://github.com/Koyonari/Koyonari/blob/main/stats.svg">
+    <img src="https://raw.githubusercontent.com/Koyonari/Koyonari/main/stats.svg" alt="Contributions in the last year" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://yourwebsite.com">yourwebsite.com</a> ·
-  <a href="https://instagram.com/yourhandle">instagram</a> ·
-  <a href="https://linkedin.com/in/yourhandle">linkedin</a> ·
-  <a href="mailto:you@example.com">email</a>
+  <a href="https://yongshyan.vercel.app/">yongshyan.vercel.app</a> ·
+  <a href="https://www.linkedin.com/in/yong-shyan-an/">linkedin</a> ·
+  <a href="https://codeforces.com/profile/ys_">codeforces</a> ·
+  <a href="mailto:yongshyan.an@gmail.com">email</a>
 </p>
 
 <br>
@@ -45,11 +45,10 @@
 
 ### About
 
-> One-line tagline about who you are.
-> A second line — what philosophy or approach drives your work.
+> Pushes pixels by day, hunts for primes by night, prices options on the weekend.
 
 A short paragraph about what you build and what you're currently focused on.
-Mention a flagship project with a link, e.g. [my-project](https://github.com/YOUR_USERNAME/my-project) —
+Mention a flagship project with a link, e.g. [my-project](https://github.com/Koyonari/my-project) —
 a one-line description of what it does. Add a second sentence on another
 interest (a field you're deep into, a technology you're exploring, etc).
 
@@ -59,7 +58,7 @@ interest (a field you're deep into, a technology you're exploring, etc).
 
 ### Stack
 
-`language` `language` `framework` `framework` `database` `tool` `tool` `os`
+`c++` `python` `c#` `react` `nextjs` `tailwind` `nodejs` `git`
 
 <br>
 
@@ -67,13 +66,13 @@ interest (a field you're deep into, a technology you're exploring, etc).
 
 ### Projects
 
-**[project-one](https://github.com/YOUR_USERNAME/project-one)** · `tech, tech`
+**[project-one](https://github.com/Koyonari/project-one)** · `tech, tech`
 One or two lines describing what it does and why it's interesting.
 
-**[project-two](https://github.com/YOUR_USERNAME/project-two)** · `tech`
+**[project-two](https://github.com/Koyonari/project-two)** · `tech`
 One or two lines describing what it does and why it's interesting.
 
-**[project-three](https://github.com/YOUR_USERNAME/project-three)** · `tech, tech`
+**[project-three](https://github.com/Koyonari/project-three)** · `tech, tech`
 One or two lines describing what it does and why it's interesting.
 
 <br>
@@ -88,9 +87,9 @@ One or two lines describing what it does and why it's interesting.
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/main/dark_mode.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/main/light_mode.svg">
-    <img alt="Your Name's GitHub stats" src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/main/light_mode.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Koyonari/Koyonari/main/dark_mode.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Koyonari/Koyonari/main/light_mode.svg">
+    <img alt="Koyonari's GitHub stats" src="https://raw.githubusercontent.com/Koyonari/Koyonari/main/light_mode.svg">
   </picture>
 </p>
 
@@ -105,8 +104,8 @@ One or two lines describing what it does and why it's interesting.
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-contribution-grid-snake.svg">
-    <img alt="GitHub contribution snake" src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-contribution-grid-snake.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Koyonari/Koyonari/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Koyonari/Koyonari/output/github-contribution-grid-snake.svg">
+    <img alt="GitHub contribution snake" src="https://raw.githubusercontent.com/Koyonari/Koyonari/output/github-contribution-grid-snake.svg">
   </picture>
 </p>
