@@ -1,15 +1,32 @@
 <!--
   ============================================================================
   PROFILE README — assembled from:
-    • Andrew6rant/Andrew6rant  → overall base + "Stats" block (light/dark SVG)
+    • Andrew6rant/Andrew6rant  → neofetch-style stats card (light/dark SVG),
+                                  pinned at the very top
     • andriidrok1/andriidrok1  → animated head, contributions graph,
-                                  About / Stack / Projects sections
+                                  About / Stack / Projects / Stats sections
     • umenzi/umenzi            → animated contribution "snake" graph
 
   Placeholders for About / Stack / Projects are still generic — fill those
   in with your own words. Everything else points at Koyonari/Koyonari.
   ============================================================================
 -->
+
+<!-- ================================ STATS ================================
+     Andrew6rant-style stats card: repos, commits, stars, followers, total
+     lines of code — deliberately NO contribution calendar here (that lives
+     in the "GitHub Graph" section below, via umenzi's snake).
+========================================================================= -->
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Koyonari/Koyonari/main/dark_mode.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Koyonari/Koyonari/main/light_mode.svg">
+    <img alt="Koyonari's GitHub stats" src="https://raw.githubusercontent.com/Koyonari/Koyonari/main/light_mode.svg">
+  </picture>
+</p>
+
+<br>
 
 <!-- ============================== HEAD ==================================
      Animated portrait (andriidrok1 style). Rendered as an SVG so it survives
@@ -78,19 +95,18 @@ One or two lines describing what it does and why it's interesting.
 <br>
 
 <!-- ================================ STATS ================================
-     Andrew6rant-style stats card: repos, commits, stars, followers, total
-     lines of code — deliberately NO contribution calendar here (that lives
-     in the "GitHub Graph" section below, via umenzi's snake).
+     andriidrok1-style: streak + top languages. Deliberately NO calendar
+     card here (year.svg) — that's covered by umenzi's snake below.
 ========================================================================= -->
 
 ### Stats
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Koyonari/Koyonari/main/dark_mode.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Koyonari/Koyonari/main/light_mode.svg">
-    <img alt="Koyonari's GitHub stats" src="https://raw.githubusercontent.com/Koyonari/Koyonari/main/light_mode.svg">
-  </picture>
+  <img src="https://raw.githubusercontent.com/Koyonari/Koyonari/main/streak.svg" alt="commit streak" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Koyonari/Koyonari/main/langs.svg" alt="top languages" />
 </p>
 
 <br>
