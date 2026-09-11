@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <a href="https://yongshyan.vercel.app/">yongshyan.vercel.app</a> ·
+  <a href="https://yongshyan.vercel.app/">yongshyan's website</a> ·
   <a href="https://www.linkedin.com/in/yong-shyan-an/">linkedin</a> ·
   <a href="https://codeforces.com/profile/ys_">codeforces</a> ·
   <a href="mailto:yongshyan.an@gmail.com">email</a>
@@ -33,10 +33,14 @@
 
 > Pushes pixels by day, hunts for primes by night, prices options on the weekend.
 
-A short paragraph about what you build and what you're currently focused on.
-Mention a flagship project with a link, e.g. [my-project](https://github.com/Koyonari/my-project) —
-a one-line description of what it does. Add a second sentence on another
-interest (a field you're deep into, a technology you're exploring, etc).
+Studied Information Technology, specializing in software engineering — went in
+wanting full-stack, came out best at front-end, and interned on Oracle's
+front-end team on the strength of it. Lately I've been pulled toward
+quantitative finance, competitive programming, homelabbing and Linux ricing: grinding
+[Codeforces](https://codeforces.com/profile/ys_) in C++ and building
+[vestraii](https://github.com/Koyonari/vestraii), a tool that scrapes live
+news for the top 500 stocks and ranks them by sentiment-driven price
+predictions.
 
 <br>
 
@@ -44,7 +48,7 @@ interest (a field you're deep into, a technology you're exploring, etc).
 
 ### Stack
 
-`c++` `python` `c#` `react` `nextjs` `tailwind` `nodejs` `git`
+`c++` `python` `typescript` `c#` `nextjs` `tailwindcss` `docker` `git`
 
 <br>
 
@@ -52,14 +56,31 @@ interest (a field you're deep into, a technology you're exploring, etc).
 
 ### Projects
 
-**[project-one](https://github.com/Koyonari/project-one)** · `tech, tech`
-One or two lines describing what it does and why it's interesting.
+**[codeforces](https://github.com/Koyonari/codeforces)** · `c++`
+Structured competitive programming practice: 5 problems a day, 50 cleared
+per difficulty tier before advancing, plus regular contest participation. Currently serving National Service in Singapore, therefore, participation is on and off.
 
-**[project-two](https://github.com/Koyonari/project-two)** · `tech`
-One or two lines describing what it does and why it's interesting.
+**[til-26-attention-is-all-i-l-nlp](https://github.com/Koyonari/til-26-attention-is-all-i-l-nlp)** · `python, docker`
+Writeup for BrainHack 2026's NLP RAG challenge — 1st place in qualifiers
+(98.3% accuracy) with a retrieval-augmented QA pipeline, including an
+adversarial GCG attack crafted against the LLM judge scoring the answers.
 
-**[project-three](https://github.com/Koyonari/project-three)** · `tech, tech`
-One or two lines describing what it does and why it's interesting.
+**[vestraii](https://github.com/Koyonari/vestraii)** · `typescript, nextjs, python`
+Web app that scrapes live news for the top 500 stocks, runs sentiment
+analysis on scheduled cron jobs, and ranks/predicts price movement with
+confidence bounds.
+
+**[arch-hyprland](https://github.com/Koyonari/arch-hyprland)** · `shell, lua`
+My Hyprland rice on CachyOS/Arch — Waybar, Kitty, Rofi, and the rest of the
+stack repainted automatically by Matugen whenever the wallpaper changes.
+
+**[pi_nas_setup](https://github.com/Koyonari/pi_nas_setup)** · `zfs, raspberry pi`
+Notes for a home NAS built on a Raspberry Pi 5 with a Radxa Penta SATA HAT
+and 4x 1TB SSDs in ZFS RAIDZ1 using OMV with Navidrome, PhotoPrism, Sanoid and more, plus backup/restore and troubleshooting runbooks.
+
+**[BannerBites](https://github.com/Koyonari/BannerBites_FSDIT03)** · `react, nodejs, aws`
+Full-stack advertisement management platform with real-time WebSocket updates and
+DynamoDB/S3-backed storage, built with a team of 5 for a capstone.
 
 <br>
 
