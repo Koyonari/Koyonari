@@ -339,7 +339,9 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib
     find_and_replace(root, 'repo_data', format_number(repo_data))
     justify_format(root, 'contrib_data', contrib_data)
     justify_format(root, 'follower_data', follower_data, 10)
-    find_and_replace(root, 'loc_data', format_number(loc_data[0] + loc_data[1]))
+    # loc_data[0] and [1] arrive pre-formatted as comma strings, not ints
+    touched = sum(int(str(v).replace(',', '')) for v in loc_data[:2])
+    find_and_replace(root, 'loc_data', format_number(touched))
     justify_format(root, 'loc_add', loc_data[0])
     justify_format(root, 'loc_del', loc_data[1], 7)
     realign_info_column(root)
