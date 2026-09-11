@@ -38,11 +38,16 @@ jobs:
       # --- Head + contributions graph -------------------------------------
       # scripts/generate_stats.py comes from andriidrok1/andriidrok1.
       # Copy it (and any hd-*.svg headings you want) into this repo before
-      # enabling this step.
+      # enabling this step. It's given the same ACCESS_TOKEN PAT as today.py
+      # below (not the workflow's own GITHUB_TOKEN) so the totals and
+      # language mix include private repos and private contributions —
+      # a request authenticated as the profile owner sees their own private
+      # activity; the workflow token, acting as a bot, would only ever see
+      # what's public.
       - name: Generate head + contributions graph
         if: hashFiles('scripts/generate_stats.py') != ''
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           GH_LOGIN: ${{ github.repository_owner }}
         run: python3 scripts/generate_stats.py
 

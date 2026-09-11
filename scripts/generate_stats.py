@@ -14,7 +14,9 @@ background, and the same left-to-right clipPath reveal with a cursor riding
 the edge. Motion is SMIL because GitHub strips <script> from READMEs.
 
 Env:
-  GITHUB_TOKEN  required
+  GITHUB_TOKEN  required — must be a personal access token belonging to
+                GH_LOGIN (not a workflow's own auto-issued token), or private
+                repos and private contributions are invisible to the query
   GH_LOGIN      user to summarise (default: andriidrok1)
   OUT_DIR       where to write (default: repository root)
 """
@@ -28,12 +30,17 @@ from datetime import date, datetime, timedelta, timezone
 
 API = "https://api.github.com/graphql"
 
-# Two things are pinned for determinism, both learned the hard way:
-#  * the contribution window, to whole UTC days — otherwise "the past year" is
-#    measured from request time and days drift between week buckets, moving the
-#    sparkline a fraction of a pixel and committing noise every night;
-#  * privacy: PUBLIC on repositories — otherwise a personal token sees private
-#    repos and a workflow token doesn't, so language totals disagree.
+# The contribution window is pinned to whole UTC days for determinism —
+# otherwise "the past year" is measured from request time and days drift
+# between week buckets, moving the sparkline a fraction of a pixel and
+# committing noise every night.
+#
+# repositories() below has no privacy filter, so it returns every repo
+# GITHUB_TOKEN can see — public and private alike. That only stays
+# deterministic between local runs and CI as long as both authenticate as
+# the same personal access token (see the GITHUB_TOKEN note above); a
+# workflow's own auto-issued token would silently drop private repos and
+# make the two runs disagree.
 QUERY = """
 query($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
@@ -43,8 +50,7 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
         weeks { contributionDays { contributionCount date weekday } }
       }
     }
-    repositories(first: 100, ownerAffiliations: OWNER, isFork: false,
-                 privacy: PUBLIC) {
+    repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
       nodes {
         languages(first: 12, orderBy: {field: SIZE, direction: DESC}) {
           edges { size node { name } }

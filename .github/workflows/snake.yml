@@ -18,6 +18,12 @@ jobs:
       - uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
+          # Default (the workflow's own token) only ever sees public
+          # contribution data. Passing a personal token that belongs to the
+          # profile owner makes snk report the same totals the owner sees
+          # on their own dashboard, private repos included — no public
+          # "include private contributions" profile setting required.
+          github_token: ${{ secrets.ACCESS_TOKEN }}
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
