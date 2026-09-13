@@ -72,8 +72,8 @@ jobs:
             echo "no changes"
             exit 0
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "Koyonari"
+          git config user.email "Koyonari@users.noreply.github.com"
           git add -- $FILES
           git commit -m "stats: refresh profile graphics"
           git push
