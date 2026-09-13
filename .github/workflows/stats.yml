@@ -73,7 +73,7 @@ jobs:
             exit 0
           fi
           git config user.name "Koyonari"
-          git config user.email "Koyonari@users.noreply.github.com"
+          git config user.email "yongshyan.an@gmail.com"
           git add -- $FILES
           git commit -m "stats: refresh profile graphics"
           git push
