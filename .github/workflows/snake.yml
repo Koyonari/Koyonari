@@ -32,5 +32,9 @@ jobs:
         with:
           target_branch: output
           build_dir: dist
+          # Default author is the triggering user, which would count toward
+          # the contribution graph — commit as the Actions bot instead.
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
